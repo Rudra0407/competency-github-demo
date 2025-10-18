@@ -1,9 +1,11 @@
 // Theme toggle (will be enhanced on feature branch)
-const toggle = document.getElementById('themeToggle');
-toggle?.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  const isDark = document.body.classList.contains('dark');
-  localStorage.setItem('prefersDark', isDark ? '1' : '0');
+const toggleBtn = document.getElementById('themeToggle');
+toggleBtn?.setAttribute('aria-pressed', 'false');
+
+toggleBtn?.addEventListener('click', () => {
+  const isNowDark = document.body.classList.toggle('dark');
+  toggleBtn.setAttribute('aria-pressed', String(isNowDark));
+  localStorage.setItem('prefersDark', isNowDark ? '1' : '0');
 });
 
 window.addEventListener('DOMContentLoaded', () => {
