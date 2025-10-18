@@ -1,0 +1,16 @@
+:root {
+  --bg: #ffffff;
+  --text: #111;
+}
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+header { display:flex; gap:1rem; align-items:center; }
+button { padding:0.4rem 0.7rem; }
