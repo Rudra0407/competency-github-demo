@@ -35,3 +35,15 @@ if (form) {
     msg.textContent = 'Thanks — your message was recorded (demo).';
   });
 }
+
+const textarea = document.getElementById('message');
+const charCount = document.getElementById('charCount');
+if (textarea && charCount) {
+  textarea.addEventListener('input', () => {
+    charCount.textContent = `${textarea.value.length}/500`;
+    if (textarea.value.length > 500) {
+      textarea.value = textarea.value.slice(0, 500);
+      charCount.textContent = `500/500`;
+    }
+  });
+}

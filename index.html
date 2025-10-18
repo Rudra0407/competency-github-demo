@@ -15,15 +15,18 @@
     <p id="desc">Base site created on main.</p>
 
     <section id="contactSection">
-      <h2>Contact</h2>
-      <form id="contactForm" novalidate>
-        <label>Name: <input type="text" id="name"/></label><br/>
-        <label>Email: <input type="email" id="email"/></label><br/>
-        <label>Message:<br/><textarea id="message"></textarea></label><br/>
-        <button type="submit">Send</button>
-      </form>
-      <p id="contactMsg" aria-live="polite"></p>
-    </section>
+  <h2>Contact</h2>
+  <form id="contactForm" novalidate>
+    <label>Name: <input type="text" id="name"/></label><br/>
+    <label>Email: <input type="email" id="email"/></label><br/>
+    <label>Message:<br/>
+      <textarea id="message" maxlength="500"></textarea>
+    </label><br/>
+    <p><small id="charCount">0/500</small></p>
+    <button type="submit">Send</button>
+  </form>
+  <p id="contactMsg" aria-live="polite"></p>
+</section>
   </main>
 
   <script src="script.js"></script>
